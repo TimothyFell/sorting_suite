@@ -19,7 +19,7 @@ describe('Insertion Sort', function() {
     expect(expected[0]).to.equal(undefined);
   })
   it('it can sort an array of numbers', function(){
-    var initial = [6,4,2,8,11];
+    var initial = [6,2,4,11,8];
     var sorted = insertionSort(initial);
 
     var expected = [2,4,6,8,11];

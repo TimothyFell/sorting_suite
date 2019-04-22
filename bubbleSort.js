@@ -1,16 +1,19 @@
 function bubbleSort(a) {
-  sa = Array.from(a);
+  if (a.length === 1 || a.length === 0){
+    return a;
+  }
+  // sa = Array.from(a);
   var flip;
   do {
     flip = false;
-    for (var i = 1; i < sa.length; ++i) {
-      if (sa[i - 1] > sa[i]) {
-        [ sa[i], sa[i - 1] ] = [ sa[i - 1], sa[i] ];
+    for (var i = 1; i < a.length; ++i) {
+      if (a[i - 1] > a[i]) {
+        [ a[i], a[i - 1] ] = [ a[i - 1], a[i] ];
         flip = true;
       }
     }
   } while (flip == true)
-  return sa;
+  return a;
 }
 
 module.exports = bubbleSort
