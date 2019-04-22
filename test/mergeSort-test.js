@@ -2,6 +2,22 @@ const expect = require('chai').expect
 const mergeSort = require('../mergeSort')
 
 describe('Merge Sort', function() {
+  it('it can sort an array of length 1', function() {
+    var initial = [1];
+    var sorted = mergeSort(initial);
+    var expected = [1];
+
+    expect(sorted[0]).to.equal(expected[0]);
+  })
+  it('it can sort an array of length 0', function() {
+    var initial = [];
+    var sorted = mergeSort(initial);
+    var expected = [];
+
+    expect(sorted[0]).to.equal(expected[0]);
+    expect(sorted[0]).to.equal(undefined);
+    expect(expected[0]).to.equal(undefined);
+  })
   it('it can sort an array of numbers', function(){
     var initial = [6,4,2,8,11];
     var sorted = mergeSort(initial);
