@@ -1,17 +1,17 @@
 const expect = require('chai').expect
-const bubbleSort = require('../bubbleSort')
+const insertionSort = require('../insertionSort')
 
-describe('Bubble Sort', function() {
+describe('Insertion Sort', function() {
   it('it can sort an array of length 1', function() {
     var initial = [1];
-    var sorted = bubbleSort(initial);
+    var sorted = insertionSort(initial);
     var expected = [1];
 
     expect(sorted[0]).to.equal(expected[0]);
   })
   it('it can sort an array of length 0', function() {
     var initial = [];
-    var sorted = bubbleSort(initial);
+    var sorted = insertionSort(initial);
     var expected = [];
 
     expect(sorted[0]).to.equal(expected[0]);
@@ -20,7 +20,7 @@ describe('Bubble Sort', function() {
   })
   it('it can sort an array of numbers', function(){
     var initial = [6,4,2,8,11];
-    var sorted = bubbleSort(initial);
+    var sorted = insertionSort(initial);
 
     var expected = [2,4,6,8,11];
 
@@ -32,7 +32,7 @@ describe('Bubble Sort', function() {
   })
   it('it can sort an array of numbers with duplicates', function(){
     var initial = [6,4,2,6,2];
-    var sorted = bubbleSort(initial);
+    var sorted = insertionSort(initial);
 
     var expected = [2,2,4,6,6];
 
@@ -44,7 +44,7 @@ describe('Bubble Sort', function() {
   })
   it('it can sort an array of letters', function(){
     var initial = ['c','a','z','g','t'];
-    var sorted = bubbleSort(initial);
+    var sorted = insertionSort(initial);
 
     var expected = ['a','c','g','t','z'];
 
@@ -56,7 +56,7 @@ describe('Bubble Sort', function() {
   })
   it('it can sort an array of letters with duplicates', function(){
     var initial = ['g','a','z','g','a'];
-    var sorted = bubbleSort(initial);
+    var sorted = insertionSort(initial);
 
     var expected = ['a','a','g','g','z'];
 
@@ -68,7 +68,7 @@ describe('Bubble Sort', function() {
   })
   it('it can sort an array of words, not just letters', function(){
     var initial = ['groza','awm','zebra','gbetto','awesome'];
-    var sorted = bubbleSort(initial);
+    var sorted = insertionSort(initial);
 
     var expected = ['awesome','awm','gbetto','groza','zebra'];
 
